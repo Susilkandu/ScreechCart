@@ -1,0 +1,978 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ScreechCart",
+    "dateExported": "2024-02-21T17:51:23.513Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "16a3019b-04c0-4c89-8921-9e573f617e70",
+            "name": "seller",
+            "containerId": "",
+            "created": "2024-01-02T16:38:44.494Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "54318fc1-9955-4209-a50a-db3d2a59e488",
+            "name": "item",
+            "containerId": "16a3019b-04c0-4c89-8921-9e573f617e70",
+            "created": "2024-01-05T17:38:52.500Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "667f3549-a3ff-45c8-b850-6a8c394bad52",
+            "name": "user",
+            "containerId": "",
+            "created": "2024-01-15T14:43:42.408Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "aa52b49e-dc1c-4451-a079-41193bea2007",
+            "name": "item",
+            "containerId": "667f3549-a3ff-45c8-b850-6a8c394bad52",
+            "created": "2024-01-24T15:35:42.558Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "89be5e19-88fa-4136-b335-b84be9a5347a",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "16a3019b-04c0-4c89-8921-9e573f617e70",
+            "name": "saveInfo",
+            "url": "http://localhost:3000/seller/saveInfo",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-01-02T16:38:57.085Z",
+            "modified": "2024-02-17T19:55:39.086Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJhODY0OTQyOWE0YjU1NDMzMzYxYjciLCJpYXQiOjE3MDgxOTk3MDksImV4cCI6MTcwODYzMTcwOX0.-3ImZ5Vkh-vbiufjKxJfp4jgO9NJAN18jskcemKxBzY"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Sushil kandu\",\n  \"email\":\" kandusushil9@gmail.com\",\n  \"address\":{\n    \"shopName\": \"Nandlal Sahaj Jan Seva Kendra\",\n    \"pinCode\": 273304,\n    \"vill\": \"Togri\",\n    \"city\": \"Nichlaul\",\n    \"district\": \"Maharajganj\",\n    \"state\": \"Uttar-Pradesh\",\n    \"country\": \"India\",\n    \"location\":{\n      \"latitude\":\"28.829\",\n      \"longitude\":\"78.246399\"\n    }\n  },\n  \"password\":\"Hu\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "719aa34c-b57d-4e2a-bf22-068ba6423743",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "16a3019b-04c0-4c89-8921-9e573f617e70",
+            "name": "verifyOtpAndCreateSellerAc",
+            "url": "http://localhost:3000/seller/verifyOtpAndCreateSellerAc",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2024-02-17T19:28:50.045Z",
+            "modified": "2024-02-17T20:20:44.948Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \n \"countryCode\" :\"+91\",\n \"mobile\":\"7460894549\",\n \"otp\":\"956563\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "61a43ff0-9932-4eea-8f0d-e1595e556554",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "16a3019b-04c0-4c89-8921-9e573f617e70",
+            "name": "loginSellerAc",
+            "url": "http://localhost:3000/seller/loginSellerAc",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-01-05T15:51:59.672Z",
+            "modified": "2024-01-31T17:41:54.741Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"mobile\":7317704076,\n  \"password\":\"Hu\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bdff3087-6abd-4654-9836-099cba0260d6",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "54318fc1-9955-4209-a50a-db3d2a59e488",
+            "name": "addItem",
+            "url": "localhost:3000/seller/item/addItem",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-01-05T17:39:01.523Z",
+            "modified": "2024-01-31T21:37:50.241Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJhODY0OTQyOWE0YjU1NDMzMzYxYjciLCJpYXQiOjE3MDY3MjI5MjAsImV4cCI6MTcwNzE1NDkyMH0.AvKXX47wBzDWjdOEx1BxFdvB5j6f7tqLWCk8a0VU09c"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Realme one\",\n    \"model\": \"Realme \",\n    \"category\": \"Cellphone\",\n    \"price\": 320,\n    \"description\": \"Ultra 10 pro Camera\",\n    \"qty\": 52\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "482e14f2-3658-426c-beb3-3d3d57db78d1",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "54318fc1-9955-4209-a50a-db3d2a59e488",
+            "name": "getItems",
+            "url": "http://localhost:3000/seller/item/getItems",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-01-09T15:53:48.888Z",
+            "modified": "2024-01-31T19:57:52.912Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJhODY0OTQyOWE0YjU1NDMzMzYxYjciLCJpYXQiOjE3MDY3MjI5MjAsImV4cCI6MTcwNzE1NDkyMH0.AvKXX47wBzDWjdOEx1BxFdvB5j6f7tqLWCk8a0VU09c"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "dcaac054-e1a3-4c29-bc62-72a4562b28b2",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "54318fc1-9955-4209-a50a-db3d2a59e488",
+            "name": "updateQty",
+            "url": "http://localhost:3000/seller/item/updateQty",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-01-09T16:01:21.466Z",
+            "modified": "2024-01-24T16:05:45.059Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTlkOTFjN2M4ZTJiYTRiNWRhNzkzZDYiLCJpYXQiOjE3MDUwNzE4NjksImV4cCI6MTcwNTUwMzg2OX0.s4OACG0VPju622gZID_q_JtoHt9-oLQdp3cQjbrouwE"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"itemId\":\"65a15bd58cf12ec609084de8\",\n  \"newQty\":\"757\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b7133a82-aee1-47b2-9925-090d360fd8ed",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "54318fc1-9955-4209-a50a-db3d2a59e488",
+            "name": "deleteItem",
+            "url": "http://localhost:3000/seller/item/deleteItem/65a25fe62c38d8790ccaefbc",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-01-09T16:26:15.373Z",
+            "modified": "2024-01-24T16:07:26.507Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWEyNWRlOTQ4MDRlMjY4ZTQ3ZGVkYzAiLCJpYXQiOjE3MDUxNDAxNzQsImV4cCI6MTcwNTU3MjE3NH0.TvPfPxQdR6PdE1dyF7avb9w-bCAFwZuKYxpWXi48egk"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e52043ef-62fe-45ce-9a0a-684181188246",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "54318fc1-9955-4209-a50a-db3d2a59e488",
+            "name": "updateItem",
+            "url": "http://localhost:3000/seller/item/updateItem",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-01-09T17:56:10.275Z",
+            "modified": "2024-01-24T16:07:32.660Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTlkOTFjN2M4ZTJiYTRiNWRhNzkzZDYiLCJpYXQiOjE3MDQ4MjUzMTEsImV4cCI6MTcwNTI1NzMxMX0.eT2fMEWno5ND74rMoUGmTzeRD4_JR3tqDnm3UKMH0t8"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"_id\": \"65a15bd58cf12ec609084de8\",\n    \"name\": \"Diamon A7\",\n    \"model\": \"Kohinoor 205\",\n    \"category\": \"Diamond\",\n    \"price\": 77897893535,\n    \"description\": \"Kohinoor Hira from England that's source is India (golkunda)\",\n    \"qty\": 1\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1b5dd408-1a5d-483f-aa42-7d0fd2221e3b",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "54318fc1-9955-4209-a50a-db3d2a59e488",
+            "name": "addPhoto",
+            "url": "http://localhost:3000/seller/item/addPhoto",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2024-01-13T08:47:21.961Z",
+            "modified": "2024-01-13T10:56:57.045Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWEyNWRlOTQ4MDRlMjY4ZTQ3ZGVkYzAiLCJpYXQiOjE3MDUxNDAxNzQsImV4cCI6MTcwNTU3MjE3NH0.TvPfPxQdR6PdE1dyF7avb9w-bCAFwZuKYxpWXi48egk"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"itemId\":\"65a2633627aefd1f16fa729f\",\n  \"photoUrl\":\"65a25de94804e268e47dedc0\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "605beb08-230f-467e-b938-66f2eb772452",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "54318fc1-9955-4209-a50a-db3d2a59e488",
+            "name": "deleteItemPhoto",
+            "url": "http://localhost:3000/seller/item/deletePhoto/65a2633627aefd1f16fa729f/65a25de94804e268e47dedc0",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2024-01-13T10:53:27.667Z",
+            "modified": "2024-01-13T10:58:10.855Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWEyNWRlOTQ4MDRlMjY4ZTQ3ZGVkYzAiLCJpYXQiOjE3MDUxNDAxNzQsImV4cCI6MTcwNTU3MjE3NH0.TvPfPxQdR6PdE1dyF7avb9w-bCAFwZuKYxpWXi48egk"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9d32e884-4efb-4823-a48c-0789d4f18c5d",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "16a3019b-04c0-4c89-8921-9e573f617e70",
+            "name": "updateProfilePhoto",
+            "url": "http://localhost:3000/seller/updateProfilePhoto",
+            "method": "PUT",
+            "sortNum": 110000,
+            "created": "2024-01-13T13:20:58.935Z",
+            "modified": "2024-02-17T19:55:57.902Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJhODY0OTQyOWE0YjU1NDMzMzYxYjciLCJpYXQiOjE3MDgxOTk3MDksImV4cCI6MTcwODYzMTcwOX0.-3ImZ5Vkh-vbiufjKxJfp4jgO9NJAN18jskcemKxBzY"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"photoUrl\":\"https://media.licdn.com/dms/image/D5635AQFM3ZPhMunlcg/profile-framedphoto-shrink_200_200/0/1705857887149?e=1707328800&v=beta&t=gGus-_stYQ1ggnXlwYcKL8BM8x55k80V9FLgTF45dfQ\",\n  \"hle\":\"kl\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3e4ca5f8-e174-4b81-8e45-57cbac25e608",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "667f3549-a3ff-45c8-b850-6a8c394bad52",
+            "name": "sendOtp",
+            "url": "http://localhost:3000/user/sendOtp",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2024-01-15T15:22:46.789Z",
+            "modified": "2024-01-18T16:02:54.324Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"countryCode\":\"+91\",\n  \"mobile\":\"6394521336\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ea67a29d-1089-4894-9df7-e60123204556",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "667f3549-a3ff-45c8-b850-6a8c394bad52",
+            "name": "verifyOtpAndCreateAc",
+            "url": "http://localhost:3000/user/verifyOtpAndCreateAc",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2024-01-19T13:03:28.767Z",
+            "modified": "2024-01-21T09:22:59.912Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"countryCode\":\"+91\",\n  \"mobile\":6394521336,\n  \"otp\":\"362172\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "502c46e3-b3a7-42cc-ad76-35dbaebc0249",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "667f3549-a3ff-45c8-b850-6a8c394bad52",
+            "name": "saveInfo",
+            "url": "http://localhost:3000/user/saveInfo",
+            "method": "PUT",
+            "sortNum": 160000,
+            "created": "2024-01-21T09:55:27.868Z",
+            "modified": "2024-01-31T18:04:32.103Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwZDdiMDE3YWY2ODNmMTU2NzVjNDYiLCJpYXQiOjE3MDYwODgzNjgsImV4cCI6MTcwNzgxNjM2OH0.Jom3Sg25hj41HWbO_KosZzlaHklI7Wjz0Y7dqfscU40"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"address\": {\n    \"pinCode\": 273304,\n    \"vill\": \"Hargaw\",\n    \"city\": \"Nichlaul\",\n    \"district\": \"Maharajganj\",\n    \"state\": \"Uttar-Pradehs\",\n    \"country\": \"India\",\n    \"landMark\": \"Nearby Sp public School\"\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "18eb9567-d207-4831-a609-b766da2410fd",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "667f3549-a3ff-45c8-b850-6a8c394bad52",
+            "name": "sendOtpForResetPasd",
+            "url": "http://localhost:3000/user/sendOtpForResetPasd",
+            "method": "POST",
+            "sortNum": 170000,
+            "created": "2024-01-24T09:25:00.324Z",
+            "modified": "2024-01-24T09:46:44.662Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"countryCode\":\"+91\",\n  \"mobile\":\"6394521336\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b2a117c2-7a8e-4e2d-8d80-6710b70d1cb8",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "667f3549-a3ff-45c8-b850-6a8c394bad52",
+            "name": "verifyOtpAndUpdatePassword",
+            "url": "http://localhost:3000/user/verifyOtpAndUpdatePassword",
+            "method": "PUT",
+            "sortNum": 180000,
+            "created": "2024-01-24T10:25:35.184Z",
+            "modified": "2024-01-24T10:32:19.353Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"countryCode\":\"+91\",\n  \"mobile\":\"6394521336\",\n  \"otp\":\"202176\",\n  \"password\":\"159753\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a9d65afb-5490-4506-8589-ed506bfec849",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "667f3549-a3ff-45c8-b850-6a8c394bad52",
+            "name": "loginUser",
+            "url": "http://localhost:3000/user/loginUser",
+            "method": "POST",
+            "sortNum": 190000,
+            "created": "2024-01-24T12:33:30.586Z",
+            "modified": "2024-01-24T12:56:25.552Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"countryCode\":\"+91\",\n  \"mobile\":\"6394521336\",\n  \"password\":\"159753\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "19d90495-99c5-48bf-baa5-948e764ccdd1",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "aa52b49e-dc1c-4451-a079-41193bea2007",
+            "name": "getItem",
+            "url": "http://localhost:3000/user/item/getItem",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2024-01-24T15:35:53.203Z",
+            "modified": "2024-01-31T19:53:17.679Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwZDdiMDE3YWY2ODNmMTU2NzVjNDYiLCJpYXQiOjE3MDYwODgzNjgsImV4cCI6MTcwNzgxNjM2OH0.Jom3Sg25hj41HWbO_KosZzlaHklI7Wjz0Y7dqfscU40"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"seller\":\"65ba8649429a4b55433361b7\",\n\"page\":25\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e9a0c0b8-1724-4a41-af8d-1ebaa8fe0d28",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "aa52b49e-dc1c-4451-a079-41193bea2007",
+            "name": "initiatePayment",
+            "url": "http://localhost:3000/user/item/initiatePayment",
+            "method": "POST",
+            "sortNum": 210000,
+            "created": "2024-01-25T20:05:50.573Z",
+            "modified": "2024-02-01T16:11:24.535Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwZDdiMDE3YWY2ODNmMTU2NzVjNDYiLCJpYXQiOjE3MDYwODgzNjgsImV4cCI6MTcwNzgxNjM2OH0.Jom3Sg25hj41HWbO_KosZzlaHklI7Wjz0Y7dqfscU40"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\":\"65b1472543e4b1fff1cb1ac2\",\n  \"qty\":\"5\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "42e66947-b954-418e-a54e-f4d2ed6291a8",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "aa52b49e-dc1c-4451-a079-41193bea2007",
+            "name": "viewItemDetails",
+            "url": "http://localhost:3000/user/item/viewItemDetails",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2024-01-25T20:26:11.139Z",
+            "modified": "2024-01-25T20:43:11.954Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\":\"65b1472543e4b1fff1cb1ac2\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "327442ee-9b84-48a9-b396-9eee5d53539b",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "aa52b49e-dc1c-4451-a079-41193bea2007",
+            "name": "verifyPayment",
+            "url": "http://localhost:3000/user/item/verifyPayment",
+            "method": "POST",
+            "sortNum": 230000,
+            "created": "2024-01-30T16:56:41.910Z",
+            "modified": "2024-01-30T16:57:34.245Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwZDdiMDE3YWY2ODNmMTU2NzVjNDYiLCJpYXQiOjE3MDYwODgzNjgsImV4cCI6MTcwNzgxNjM2OH0.Jom3Sg25hj41HWbO_KosZzlaHklI7Wjz0Y7dqfscU40"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c044c84b-700f-4be7-be09-2c652709cee2",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "aa52b49e-dc1c-4451-a079-41193bea2007",
+            "name": "placeCODOrder",
+            "url": "http://localhost:3000/user/item/placeCODOrder",
+            "method": "POST",
+            "sortNum": 240000,
+            "created": "2024-01-31T19:07:10.810Z",
+            "modified": "2024-02-18T16:47:18.841Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwZDdiMDE3YWY2ODNmMTU2NzVjNDYiLCJpYXQiOjE3MDgyNzQ4MTQsImV4cCI6MTcxMDAwMjgxNH0.ZOXnXxDBP4JJf-duYd3ES8E2J2oVlQBMzeO9vb7DqU4"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"itemId\":\"65baa634801a0f56254c1144\",\n  \"qty\":2,\n  \"contactNo\":\"9565636459\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fcd0e6f6-77ca-4fad-88ca-928d2ee0f258",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "16a3019b-04c0-4c89-8921-9e573f617e70",
+            "name": "sendOtpViaSms",
+            "url": "http://localhost:3000/seller/sendOtpViaSms",
+            "method": "POST",
+            "sortNum": 250000,
+            "created": "2024-02-17T19:08:05.911Z",
+            "modified": "2024-02-17T20:20:37.265Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"countryCode\":\"+91\",\n  \"mobile\":\"7460894549\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "83fcf47c-d588-4fb8-9de4-b89ab4e044be",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "16a3019b-04c0-4c89-8921-9e573f617e70",
+            "name": "sendOtpForResetPasd",
+            "url": "http://localhost:3000/seller/sendOtpForResetPasd",
+            "method": "PUT",
+            "sortNum": 270000,
+            "created": "2024-02-17T22:46:14.267Z",
+            "modified": "2024-02-17T22:51:08.367Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"countryCode\":\"+91\",\n  \"mobile\":\"6394521336\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2d463662-c2a1-4c96-af65-0e5229015734",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "16a3019b-04c0-4c89-8921-9e573f617e70",
+            "name": "verifyOtpAndUpdatePasd",
+            "url": "http://localhost:3000/seller/verifyOtpAndUpdatePasd",
+            "method": "PUT",
+            "sortNum": 280000,
+            "created": "2024-02-17T22:53:37.265Z",
+            "modified": "2024-02-17T22:56:43.093Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"countryCode\":\"+91\",\n  \"mobile\":\"6394521336\",\n  \"otp\":\"867860\",\n  \"password\":\"hello\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "361150a7-ef53-49e8-8479-555d37abd8f4",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "16a3019b-04c0-4c89-8921-9e573f617e70",
+            "name": "myProfile",
+            "url": "http://localhost:3000/seller/myProfile",
+            "method": "GET",
+            "sortNum": 290000,
+            "created": "2024-02-18T16:16:00.835Z",
+            "modified": "2024-02-18T16:22:06.169Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJhODY0OTQyOWE0YjU1NDMzMzYxYjciLCJpYXQiOjE3MDgyNzMxMTIsImV4cCI6MTcwODcwNTExMn0.1FVOph0mFukKJsJgcPAfKf3WRtVtcS1xGhOhoRGBaG8"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3668a18a-1973-4d63-a951-d505082bd19d",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "54318fc1-9955-4209-a50a-db3d2a59e488",
+            "name": "showOrders",
+            "url": "http://localhost:3000/seller/item/showOrders",
+            "method": "GET",
+            "sortNum": 300000,
+            "created": "2024-02-18T16:42:37.298Z",
+            "modified": "2024-02-18T17:58:12.994Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJhODY0OTQyOWE0YjU1NDMzMzYxYjciLCJpYXQiOjE3MDgyNzMxMTIsImV4cCI6MTcwODcwNTExMn0.1FVOph0mFukKJsJgcPAfKf3WRtVtcS1xGhOhoRGBaG8"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"itemId\":\"65baa634801a0f56254c1144\",\n  \"pStatus\":\"unpaid\",\n  \"status\":\"ongoing\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "15ebfdf4-3066-4429-b727-335a8fb0b4b2",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "aa52b49e-dc1c-4451-a079-41193bea2007",
+            "name": "showMyOrder",
+            "url": "http://localhost:3000/user/item/showMyOrder",
+            "method": "GET",
+            "sortNum": 310000,
+            "created": "2024-02-18T22:41:24.884Z",
+            "modified": "2024-02-18T22:42:55.178Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwZDdiMDE3YWY2ODNmMTU2NzVjNDYiLCJpYXQiOjE3MDgyOTYxMjksImV4cCI6MTcxMDAyNDEyOX0.7wqY7FXZOeepX_afPmOvss-ksZNc76OhFOLSyANQcZw"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "df6a61a1-15e5-4c7d-b2ca-aeeab171c85a",
+            "colId": "b90fc3bb-3dea-45f7-9a3b-948a3878b7ec",
+            "containerId": "667f3549-a3ff-45c8-b850-6a8c394bad52",
+            "name": "showMYProfile",
+            "url": "http://localhost:3000/user/showMyProfile",
+            "method": "GET",
+            "sortNum": 320000,
+            "created": "2024-02-18T22:49:27.889Z",
+            "modified": "2024-02-18T22:50:05.627Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwZDdiMDE3YWY2ODNmMTU2NzVjNDYiLCJpYXQiOjE3MDgyOTYxMjksImV4cCI6MTcxMDAyNDEyOX0.7wqY7FXZOeepX_afPmOvss-ksZNc76OhFOLSyANQcZw"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
