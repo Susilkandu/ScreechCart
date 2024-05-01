@@ -3,3 +3,8 @@ backend/node_modules/
 
 #Ignore node_modules in frontend
 frontend/node_modules/
+
+# ignore log env file
+.env
+#ignore log file
+app.log
