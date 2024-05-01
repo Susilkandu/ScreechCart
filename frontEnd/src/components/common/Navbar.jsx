@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function () {
   return (
     <div className="navbar">
@@ -11,8 +12,12 @@ export default function () {
       </div>
       <ul className="navGroup">
         <li>Login User</li>
-        <a href="/CreateSellerAccount"><li>Become Seller</li></a>
-        <a href="/"><li>New Account</li></a>
+        <li>
+          <Link to="/CreateSellerAccount">Become Seller</Link>
+        </li>
+        <li>
+          <Link to="/loginSellerAccount">Login Seller</Link>
+        </li>
         <li>Login User</li>
       </ul>
     </div>

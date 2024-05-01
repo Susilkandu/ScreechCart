@@ -68,3 +68,10 @@ export const saveInfo = async (data)=>{
   throw(error);
  } 
 }
+export const loginSellerAccount = async(data)=>{
+  try {
+    
+  } catch (error) {
+    throw (error);
+  }
+}
