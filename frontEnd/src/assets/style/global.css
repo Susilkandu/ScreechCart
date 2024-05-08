@@ -1,6 +1,6 @@
 body {
   --primary: black;
-  --secondary: #37475a;
+  --secondary: white;
   --tertiary: #232f3e;
   --text: whitesmoke;
   color: var(--text);
@@ -74,6 +74,7 @@ body {
     width: 100%;
     height: 100vh;
     padding-top: 3.5rem;
+    overflow: auto;
   }
   /* createSellerAccount-form */
   .createSellerAccount-form {
@@ -163,6 +164,9 @@ body {
   border-radius: 0.7rem;
   margin-left: 0.8rem;
 }
+.save-info-btn{
+  cursor: pointer;
+}
 /* End createSellerAccount-form */
 
 /* Product Listing Page */
@@ -219,15 +223,7 @@ body {
   margin: auto;
   margin-top: 0.2rem;
 }
-.profile-info {
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(29, 135, 253, 1) 55%,
-    rgba(69, 214, 252, 1) 100%
-  );
-}
+
 .navigation {
   width: 150px;
   width: 150px;
@@ -238,9 +234,57 @@ body {
   align-items: center;
 }
 /* End of SideBar */
+.profile-info {
+  width: 100%;
+  height: 100%;
+}
+.profile-info .pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 5rem;
+  overflow: hidden;
+  margin: auto;
+}
+.profile-info .pic img {
+  width: 100%;
+}
+#sellerDetails {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 50vw;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 .action-Container {
   width: 80vw;
   border: 2px solid #0a66c2;
+  color: #232f3e;
+  display: fixed;
+  overflow: auto;
+}
+#sellerEmail {
+  margin: 0;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+#address {
+  width: 80%;
+  border-radius: 0.5rem;
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+#address div {
+  border: 1px solid black;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+}
+.edit-btn{
+  cursor: pointer;
+  font-size: 40px;
 }
 /*End of Seller Dashboard */
 

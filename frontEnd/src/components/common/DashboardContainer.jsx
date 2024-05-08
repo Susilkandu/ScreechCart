@@ -8,7 +8,7 @@ export default function (){
             <Routes>
             <Route path="/createSellerAccount" element={<CreateSellerAccount/>}></Route>
             <Route path="/loginSellerAccount" element={<LoginSellerAccount/>}></Route>
-            <Route path="/sellerDashboard" element={<SellerDashboard/>}></Route>
+            <Route path="/sellerDashboard/*" element={<SellerDashboard/>}></Route>
             </Routes>
         </div>
     )

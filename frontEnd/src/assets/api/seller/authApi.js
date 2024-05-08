@@ -21,6 +21,7 @@ export const sendOtpViaSms = async (countryCode, mobile) => {
       return responseData;
     }
   } catch (error) {
+    toast.error("Failed To Send");
     throw error;
   }
 };
@@ -65,6 +66,7 @@ export const saveInfo = async (data)=>{
     return responseData;
   }
  } catch (error) {
+  toast.error("Failed to Save");
   throw(error);
  } 
 }

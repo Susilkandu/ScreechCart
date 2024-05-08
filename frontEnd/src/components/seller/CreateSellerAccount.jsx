@@ -7,6 +7,7 @@ import {
   sendOtpViaSms,
   verifyOtpAndCreateSellerAc,
 } from "../../assets/api/seller/authApi";
+import { toast } from "react-toastify";
 
 export default function () {
   const navigate= useNavigate();
