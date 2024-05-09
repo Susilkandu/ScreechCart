@@ -1,8 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 export default function Profile() {
+const profile=useSelector(state=>state.sellerProfileDetails);
+const profileHandler=()=>{
+  console.log(profile);
+}
+
   return (
-    <div className="profile-info">
+    <div className="profile-info" >
       <div className="pic">
         <img
           src="https://th.bing.com/th/id/OIP.518KBNuR-t3O8zdFqIrR5gHaHa?pid=ImgDet&w=202&h=202&c=7"
@@ -11,7 +17,7 @@ export default function Profile() {
       </div>
       <div id="sellerDetails">
         <div className="personal">
-          <b style={{ textTransform: "upperCase", fontSize: "1.5rem" }}>
+          <b onClick={profileHandler} style={{ textTransform: "upperCase", fontSize: "1.5rem" }}>
             Sushil Kandu
           </b>
           <br />
