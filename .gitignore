@@ -7,4 +7,4 @@ frontend/node_modules/
 # ignore log env file
 .env
 #ignore log file
-app.log
+/app.log
