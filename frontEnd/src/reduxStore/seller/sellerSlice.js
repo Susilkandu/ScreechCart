@@ -1,18 +1,48 @@
-import {createSlice} from '@reduxjs/toolkit';
-export const animationSlice = createSlice({
-    name:'animation',
-    initialState:{
-        isLoading:false
+import { createSlice } from "@reduxjs/toolkit";
+const animationSlice = createSlice({
+  name: "animation",
+  initialState: {
+    isLoading: false,
+  },
+  reducers: {
+    startLoading: (state) => {
+      state.isLoading = true;
     },
-    reducers:{
-        startLoading:(state)=>{
-            state.isLoading = true;
-        },
-        stopLoading:(state)=>{
-            state.isLoading= false;
-        },
+    stopLoading: (state) => {
+      state.isLoading = false;
     },
+  },
+});
+const profileSlice = createSlice({
+  name: "profile",
+  initialState: {
+    name: "",
+    email: "",
+    address: {
+      shopName: "",
+      pinCode: "",
+      vill: "",
+      city: "",
+      district: "",
+      state: "",
+      country: "",
+      location: {
+        latitude: "",
+        longitude: "",
+      },
+    },
+  },
+  reducers: {
+    setProfileDetails: (state, actions) => {
+      return { state:actions.payload};
+    },
+    deleteProfileDetails: () => {
+      state = {};
+    },
+  },
 });
 
-export const {startLoading,stopLoading}= animationSlice.actions;
-export default animationSlice.reducer;
+export const { startLoading, stopLoading } = animationSlice.actions;
+export const { setProfileDetails, deleteProfileDetails } = profileSlice.actions;
+export const animationReducer = animationSlice.reducer;
+export const sellerProfileReducer = profileSlice.reducer;
