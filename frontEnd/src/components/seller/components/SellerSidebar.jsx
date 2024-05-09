@@ -1,9 +1,23 @@
-import { Link} from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { setProfileDetails } from "../../../reduxStore/seller/sellerSlice";
+import { fetchProfile } from "../../../assets/api/seller/sellerProfileApi";
+import { useEffect } from "react";
+
 export default function SellerSidebar() {
   const baseUrl = "/sellerDashboard";
+  const dispatch = useDispatch();
+
+  const fetchProfileHandler = async () => {
+    const response = await fetchProfile();
+    if (response.ackbool == 1) {
+      dispatch(setProfileDetails(response));
+    }
+  };
+
   return (
     <div className="seller-sidebar">
-      <div className="profile">
+      <div className="profile" onClick={fetchProfileHandler}>
         <Link to={`${baseUrl}/profile`} className="profile">
           <img
             src="https://th.bing.com/th/id/OIP.518KBNuR-t3O8zdFqIrR5gHaHa?pid=ImgDet&w=202&h=202&c=7"
