@@ -1,4 +1,5 @@
 const baseUrl = "http://localhost:3000/seller";
+import { Navigate } from 'react-router-dom';
 import {toast} from 'react-toastify';
 const token= localStorage.getItem('sToken');
 export const sendOtpViaSms = async (countryCode, mobile) => {
@@ -70,10 +71,29 @@ export const saveInfo = async (data)=>{
   throw(error);
  } 
 }
-export const loginSellerAccount = async(data)=>{
+export const loginSellerAccount = async(mbl,psd)=>{
   try {
-    
+  const response = await fetch(`${baseUrl}/loginSellerAc`,{
+    method:"Post",
+    headers:{
+      'Content-Type':"application/json",
+    },
+    body:JSON.stringify({
+      mobile:mbl,
+      password:psd
+    }),
+  });
+  const responseData = await response.json();
+  if(responseData.ackbool==0){
+    toast.error(responseData.message);
+  }
+  else{
+    toast.success(responseData.message);
+    localStorage.setItem('sTokent',responseData.token);
+    return responseData;
+  }
   } catch (error) {
+    toast.error('Some Error occured');
     throw (error);
   }
 }

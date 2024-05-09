@@ -98,7 +98,7 @@ try {
       if (!mobile || !password) {
         return res
           .status(400)
-          .json({ message: "Please Enter Valid Mobile Number and Password" });
+          .json({ message: "Please Enter Valid Mobile Number and Password",ackbool:0});
       } else {
         await Seller.findOne({ mobile: mobile })
           .then((data) => {
