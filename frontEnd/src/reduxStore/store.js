@@ -1,7 +1,8 @@
-import {configureStore} from '@reduxjs/toolkit';
-import animationReducer from './seller/sellerSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import { animationReducer,sellerProfileReducer } from "./seller/sellerSlice";
 export const store = configureStore({
-    reducer:{
-        animation:animationReducer,
-    }
-})
+  reducer: {
+    animation:animationReducer,
+    sellerProfileDetails:sellerProfileReducer
+  },
+});
