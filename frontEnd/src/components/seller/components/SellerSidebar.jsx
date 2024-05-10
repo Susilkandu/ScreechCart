@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 import { setProfileDetails } from "../../../reduxStore/seller/sellerSlice";
 import { fetchProfile } from "../../../assets/api/seller/sellerProfileApi";
 import { useEffect } from "react";
-
+export const fetchProfileHandler = async () => {
+  const response = await fetchProfile();
+  if (response.ackbool == 1) {
+    const details = response.data;
+    console.log(details);
+    dispatch(setProfileDetails(details));
+  }
+};
 export default function SellerSidebar() {
   const baseUrl = "/sellerDashboard";
   const dispatch = useDispatch();
@@ -11,9 +18,14 @@ export default function SellerSidebar() {
   const fetchProfileHandler = async () => {
     const response = await fetchProfile();
     if (response.ackbool == 1) {
-      dispatch(setProfileDetails(response));
+      const details = response.data;
+      console.log(details);
+      dispatch(setProfileDetails(details));
     }
   };
+  useEffect(() => {
+    fetchProfileHandler();
+  }, []);
 
   return (
     <div className="seller-sidebar">

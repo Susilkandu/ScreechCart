@@ -1,65 +1,60 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
 export default function Profile() {
-const profile=useSelector(state=>state.sellerProfileDetails);
-const profileHandler=()=>{
-  console.log(profile);
-}
-
+const details=useSelector(state=>state.sellerProfileDetails);
+const address=details.address;
   return (
     <div className="profile-info" >
       <div className="pic">
         <img
-          src="https://th.bing.com/th/id/OIP.518KBNuR-t3O8zdFqIrR5gHaHa?pid=ImgDet&w=202&h=202&c=7"
-          alt=""
+          src={details. profilePhoto}
+          alt="Not Available"
         />
       </div>
       <div id="sellerDetails">
         <div className="personal">
-          <b onClick={profileHandler} style={{ textTransform: "upperCase", fontSize: "1.5rem" }}>
-            Sushil Kandu
+          <b  style={{ textTransform: "upperCase", fontSize: "1.5rem" }}>
+            {details.name}
           </b>
           <br />
-          <b id="sellerEmail">ShivanshMuddal96@gmail.com</b>
+          <b id="sellerEmail">{details.email}</b>
           <br />
-          <b>Contact no. +916394521789</b>
+          <b>Contact no. {details.mobile.countryCode}{details.mobile.number}</b>
         </div>
         <b style={{ width: "inherit" }}>
           <hr />
         </b>
         <div id="address">
-      
           <div>
             <strong>Shop Name:</strong>{" "}
-            <span id="shopName">Mangal Medical Store</span>
+            <span id="shopName">{address.shopName}</span>
           </div>
           <div>
-            <strong>Pin Code:</strong> <span id="pinCode">203201</span>
+            <strong>Pin Code:</strong> <span id="pinCode">{address.pinCode}</span>
           </div>
           <div>
-            <strong>Village:</strong> <span id="vill">Dankaur</span>
+            <strong>Village:</strong> <span id="vill">{address.vill}</span>
           </div>
           <div>
-            <strong>City:</strong> <span id="city">Gautam Buddh Nagar</span>
+            <strong>City:</strong> <span id="city">{address.city}</span>
           </div>
           <div>
             <strong>District:</strong>{" "}
-            <span id="district">Gautam Buddh Nagar</span>
+            <span id="district">{address.district}</span>
           </div>
           <div>
-            <strong>State:</strong> <span id="state">Uttar Pradesh</span>
+            <strong>State:</strong> <span id="state">{address.state}</span>
           </div>
           <div>
-            <strong>Country:</strong> <span id="country">India</span>
+            <strong>Country:</strong> <span id="country">{address.country}</span>
           </div>
           <div>
             <strong>Location:</strong>
             <div>
-              Latitude: <span id="latitude">1625.25</span>
+              Latitude: <span id="latitude">{address.location.latitude}</span>
             </div>
             <div>
-              Longitude: <span id="longitude">155.25</span>
+              Longitude: <span id="longitude">{address.location.longitude}</span>
             </div>
           </div>
         </div>

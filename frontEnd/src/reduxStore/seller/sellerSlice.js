@@ -33,8 +33,8 @@ const profileSlice = createSlice({
     },
   },
   reducers: {
-    setProfileDetails: (state, actions) => {
-      return { state:actions.payload};
+    setProfileDetails: (state, action) => {   
+      return action.payload;
     },
     deleteProfileDetails: () => {
       state = {};

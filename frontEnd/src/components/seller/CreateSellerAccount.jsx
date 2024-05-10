@@ -72,22 +72,22 @@ export default function () {
       let newInfo = {};
       var handleChange = (e) => {
         const { name, value } = e.target;
+        console.log(Info)
         if (name.includes(".")) {
           const [parentKey, childKey] = name.split(".");
-          newInfo = {
+          setInfo((Info)=>({
             ...Info,
             [parentKey]: {
               ...Info[parentKey],
               [childKey]: value,
             },
-          };
+          }))
         } else {
-          newInfo = {
+          setInfo((Info)=>({
             ...Info,
             [name]: value,
-          };
+          }))
         }
-        setInfo(newInfo);
       };
     }
     if (saveInfoEachElement) {
