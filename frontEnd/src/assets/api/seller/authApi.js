@@ -1,8 +1,9 @@
 const baseUrl = "http://localhost:3000/seller";
 import { Navigate } from 'react-router-dom';
+
 import {toast} from 'react-toastify';
 const token= localStorage.getItem('sToken');
-export const sendOtpViaSms = async (countryCode, mobile) => {
+ const sendOtpViaSms = async (countryCode, mobile) => {
   try {
     const response = await fetch(`${baseUrl}/sendOtpViaSms`, {
       method: "post",
@@ -26,7 +27,7 @@ export const sendOtpViaSms = async (countryCode, mobile) => {
     throw error;
   }
 };
-export const verifyOtpAndCreateSellerAc = async (countryCode, mobile, otp) => {
+const verifyOtpAndCreateSellerAc = async (countryCode, mobile, otp) => {
   const response = await fetch(`${baseUrl}/verifyOtpAndCreateSellerAc`, {
     method: "post",
     headers: {
@@ -47,7 +48,7 @@ export const verifyOtpAndCreateSellerAc = async (countryCode, mobile, otp) => {
     return responseData;
   }
 };
-export const saveInfo = async (data)=>{
+const saveInfo = async (data)=>{
  try {
     const response = await fetch(`${baseUrl}/saveInfo`,{
       method:'put',
@@ -71,7 +72,7 @@ export const saveInfo = async (data)=>{
   throw(error);
  } 
 }
-export const loginSellerAccount = async(mbl,psd)=>{
+const loginSellerAccount = async(mbl,psd)=>{
   try {
   const response = await fetch(`${baseUrl}/loginSellerAc`,{
     method:"Post",
@@ -96,4 +97,10 @@ export const loginSellerAccount = async(mbl,psd)=>{
     toast.error('Some Error occured');
     throw (error);
   }
+}
+export {
+  sendOtpViaSms,
+  verifyOtpAndCreateSellerAc,
+  saveInfo,
+  loginSellerAccount
 }

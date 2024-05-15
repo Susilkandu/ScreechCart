@@ -1,0 +1,7 @@
+[5/15/2024, 1:11:50 PM] TypeError: Cannot read properties of undefined (reading '_id')
+    at addItem (C:\Users\Student\sushilKandu\ScreechCart\backend\controller\seller\item\itemController.js:18:26)
+    at Layer.handle [as handle_request] (C:\Users\Student\sushilKandu\ScreechCart\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Student\sushilKandu\ScreechCart\backend\node_modules\express\lib\router\route.js:144:13)
+    at C:\Users\Student\sushilKandu\ScreechCart\backend\middleware\seller\requireSellerLogin.js:32:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Student\sushilKandu\ScreechCart\backend\middleware\seller\requireSellerLogin.js:30:11 

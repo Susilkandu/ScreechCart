@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 export default function () {
   return (
-    <div className="navbar">
+    <div className="navbar ">
       <div className="searchGroup">
         <input
           className="searchBar"

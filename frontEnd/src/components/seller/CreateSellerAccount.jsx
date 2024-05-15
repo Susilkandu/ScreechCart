@@ -69,10 +69,8 @@ export default function () {
     const saveInfobtn = saveInfoRef.current;
     if (saveInfoElement) {
       var saveInfoEachElement = saveInfoElement.querySelectorAll("li");
-      let newInfo = {};
       var handleChange = (e) => {
         const { name, value } = e.target;
-        console.log(Info)
         if (name.includes(".")) {
           const [parentKey, childKey] = name.split(".");
           setInfo((Info)=>({
